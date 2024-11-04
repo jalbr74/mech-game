@@ -12,23 +12,23 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
-	for i in bodyList.size():
-		var body = bodyList[i]
-		var skeleton = skeletonList[i]
-		anchorBodyTo(body, skeleton)
-	
-	#var directionToBone = body.position.direction_to(skeletonBody.position)
-	#var distanceToBone = body.position.distance_to(skeletonBody.position)
-	#var andleToBone = angle_difference(body.rotation, skeletonBody.rotation)
-	#body.linear_velocity = directionToBone * distanceToBone
-	#body.angular_velocity = andleToBone
+    
+    for i in bodyList.size():
+        var body = bodyList[i]
+        var skeleton = skeletonList[i]
+        anchorBodyTo(body, skeleton)
+    
+    #var directionToBone = body.position.direction_to(skeletonBody.position)
+    #var distanceToBone = body.position.distance_to(skeletonBody.position)
+    #var andleToBone = angle_difference(body.rotation, skeletonBody.rotation)
+    #body.linear_velocity = directionToBone * distanceToBone
+    #body.angular_velocity = andleToBone
 
 func anchorBodyTo(body:PhysicsBody2D, skeletonBody:Bone2D):
-	var directionToBone = body.global_position.direction_to(skeletonBody.global_position)
-	var distanceToBone = body.global_position.distance_to(skeletonBody.global_position)
-	var andleToBone = angle_difference(body.rotation, skeletonBody.rotation)
-	body.linear_velocity = directionToBone * distanceToBone
-	#body.global_position = skeletonBody.global_position
-	#body.rotation = skeletonBody.rotation
-	#body.angular_velocity = andleToBone
+    var directionToBone = body.global_position.direction_to(skeletonBody.global_position)
+    var distanceToBone = body.global_position.distance_to(skeletonBody.global_position)
+    var andleToBone = angle_difference(body.rotation, skeletonBody.rotation)
+    body.linear_velocity = directionToBone * distanceToBone
+    #body.global_position = skeletonBody.global_position
+    #body.rotation = skeletonBody.rotation
+    #body.angular_velocity = andleToBone

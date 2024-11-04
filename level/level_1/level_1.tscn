@@ -12,6 +12,7 @@ size = Vector2(2615, 43)
 [node name="Level1" type="Node2D"]
 
 [node name="Mech1" parent="." instance=ExtResource("1_ohg3s")]
+position = Vector2(137, 575)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Mech1"]
 remote_path = NodePath("../../Camera2D")
@@ -32,3 +33,4 @@ position = Vector2(714, 670)
 shape = SubResource("RectangleShape2D_p74je")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(137, 575)

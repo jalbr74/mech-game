@@ -12,16 +12,16 @@ config_version=5
 
 config/name="mech-game"
 run/main_scene="res://level/test_level.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
-
-[physics]
-
-2d/default_gravity=0.0
 
 [dotnet]
 
 project/assembly_name="mech-game"
+
+[physics]
+
+2d/default_gravity=0.0
 
 [rendering]
 

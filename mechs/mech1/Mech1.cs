@@ -15,6 +15,8 @@ public partial class Mech1 : CharacterBody2D
     public const float Speed = 300.0f;
     public const float JumpVelocity = -400.0f;
 
+    private Vector2 _gravity = new Vector2(0, 10);
+
     private AnimatedSprite2D _animatedSprite2D;
     private MechState _state = MechState.Idle;
     
@@ -56,7 +58,7 @@ public partial class Mech1 : CharacterBody2D
     {
         if (!IsOnFloor())
         {
-            Velocity = Velocity += GetGravity() * (float)delta;
+            Velocity = Velocity += _gravity * (float)delta;
         }
     }
 

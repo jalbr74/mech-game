@@ -134,7 +134,6 @@ shape = SubResource("RectangleShape2D_wm3rd")
 [node name="armLower" type="RigidBody2D" parent="Body"]
 position = Vector2(-54, -118)
 rotation = 0.0952662
-scale = Vector2(1, 1)
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/armLower"]
@@ -149,7 +148,6 @@ shape = SubResource("RectangleShape2D_wm3rd")
 [node name="Hand" type="RigidBody2D" parent="Body"]
 position = Vector2(-50, -168)
 rotation = 0.0952662
-scale = Vector2(1, 1)
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Hand"]
@@ -192,7 +190,6 @@ shape = SubResource("RectangleShape2D_wm3rd")
 [node name="Foot" type="RigidBody2D" parent="Body"]
 position = Vector2(-49, 78)
 rotation = 0.0952662
-scale = Vector2(1, 1)
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Foot"]
@@ -235,7 +232,6 @@ shape = SubResource("RectangleShape2D_wm3rd")
 [node name="Hand2" type="RigidBody2D" parent="Body"]
 position = Vector2(41, -153)
 rotation = 0.0952662
-scale = Vector2(1, 1)
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Hand2"]
@@ -278,7 +274,6 @@ shape = SubResource("RectangleShape2D_wm3rd")
 [node name="Foot2" type="RigidBody2D" parent="Body"]
 position = Vector2(43, 78)
 rotation = 0.0952662
-scale = Vector2(1, 1)
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Foot2"]
