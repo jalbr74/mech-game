@@ -1,0 +1,181 @@
+[gd_scene load_steps=10 format=3 uid="uid://d3xkxj0q6mh04"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_ycio2"]
+
+[sub_resource type="Gradient" id="Gradient_kth7u"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b7cg1"]
+gradient = SubResource("Gradient_kth7u")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y76rd"]
+size = Vector2(16, 115)
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_m68dj"]
+target_nodepath = NodePath("targets/leftArm")
+tip_nodepath = NodePath("Body/leftArm/Bone2D3/Bone2D4")
+ccdik_data_chain_length = 2
+joint_data/0/bone_index = 1
+joint_data/0/bone2d_node = NodePath("Body/leftArm")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = true
+joint_data/0/constraint_angle_min = -111.029
+joint_data/0/constraint_angle_max = 77.383
+joint_data/0/constraint_angle_invert = true
+joint_data/0/constraint_in_localspace = true
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 2
+joint_data/1/bone2d_node = NodePath("Body/leftArm/Bone2D3")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = false
+joint_data/1/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_ldjtf"]
+target_nodepath = NodePath("targets/leftLeg")
+tip_nodepath = NodePath("Body/leftLeg/Bone2D4/Bone2D5")
+ccdik_data_chain_length = 2
+joint_data/0/bone_index = 4
+joint_data/0/bone2d_node = NodePath("Body/leftLeg")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = false
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 5
+joint_data/1/bone2d_node = NodePath("Body/leftLeg/Bone2D4")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = false
+joint_data/1/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_oyi1c"]
+target_nodepath = NodePath("targets/rightArm")
+tip_nodepath = NodePath("Body/rightArm/Bone2D3/Bone2D4")
+ccdik_data_chain_length = 2
+joint_data/0/bone_index = 7
+joint_data/0/bone2d_node = NodePath("Body/rightArm")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = true
+joint_data/0/constraint_angle_min = -74.851
+joint_data/0/constraint_angle_max = 111.331
+joint_data/0/constraint_angle_invert = true
+joint_data/0/constraint_in_localspace = true
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 8
+joint_data/1/bone2d_node = NodePath("Body/rightArm/Bone2D3")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = false
+joint_data/1/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_ql2af"]
+target_nodepath = NodePath("targets/rightLeg")
+tip_nodepath = NodePath("Body/rightLeg/Bone2D4/Bone2D5")
+ccdik_data_chain_length = 2
+joint_data/0/bone_index = 10
+joint_data/0/bone2d_node = NodePath("Body/rightLeg")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = false
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 11
+joint_data/1/bone2d_node = NodePath("Body/rightLeg/Bone2D4")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = false
+joint_data/1/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_jlw1w"]
+enabled = true
+modification_count = 4
+modifications/0 = SubResource("SkeletonModification2DCCDIK_m68dj")
+modifications/1 = SubResource("SkeletonModification2DCCDIK_ldjtf")
+modifications/2 = SubResource("SkeletonModification2DCCDIK_oyi1c")
+modifications/3 = SubResource("SkeletonModification2DCCDIK_ql2af")
+
+[node name="player" type="Node2D"]
+script = ExtResource("1_ycio2")
+
+[node name="Body" type="Node2D" parent="."]
+
+[node name="Body" type="RigidBody2D" parent="Body"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Body/Body"]
+position = Vector2(0, -55)
+scale = Vector2(0.25, 1.74)
+texture = SubResource("GradientTexture2D_b7cg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Body"]
+position = Vector2(0, -53.5)
+shape = SubResource("RectangleShape2D_y76rd")
+
+[node name="Skeleton" type="Skeleton2D" parent="."]
+modification_stack = SubResource("SkeletonModificationStack2D_jlw1w")
+
+[node name="Body" type="Bone2D" parent="Skeleton"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="leftArm" type="Bone2D" parent="Skeleton/Body"]
+position = Vector2(1, -109)
+rest = Transform2D(1, 0, 0, 1, 1, -109)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone2D3" type="Bone2D" parent="Skeleton/Body/leftArm"]
+position = Vector2(-44, 34)
+rest = Transform2D(1, 0, 0, 1, -44, 34)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone2D4" type="Bone2D" parent="Skeleton/Body/leftArm/Bone2D3"]
+position = Vector2(-3, 50)
+rest = Transform2D(1, 0, 0, 1, -3, 50)
+
+[node name="leftLeg" type="Bone2D" parent="Skeleton/Body"]
+position = Vector2(-14, 7)
+rest = Transform2D(1, 0, 0, 1, -35, 29)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone2D4" type="Bone2D" parent="Skeleton/Body/leftLeg"]
+position = Vector2(-21, 31)
+rest = Transform2D(1, 0, 0, 1, -3, 50)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone2D5" type="Bone2D" parent="Skeleton/Body/leftLeg/Bone2D4"]
+position = Vector2(-4, 46)
+rest = Transform2D(1, 0, 0, 1, -3, 50)
+
+[node name="rightArm" type="Bone2D" parent="Skeleton/Body"]
+position = Vector2(1, -109)
+rest = Transform2D(1, 0, 0, 1, 1, -109)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone2D3" type="Bone2D" parent="Skeleton/Body/rightArm"]
+position = Vector2(44, 34)
+rest = Transform2D(1, 0, 0, 1, 44, 34)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone2D4" type="Bone2D" parent="Skeleton/Body/rightArm/Bone2D3"]
+position = Vector2(-3, 50)
+rest = Transform2D(1, 0, 0, 1, -3, 50)
+
+[node name="rightLeg" type="Bone2D" parent="Skeleton/Body"]
+position = Vector2(14, 7)
+rest = Transform2D(1, 0, 0, 1, 35, 29)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone2D4" type="Bone2D" parent="Skeleton/Body/rightLeg"]
+position = Vector2(21, 31)
+rest = Transform2D(1, 0, 0, 1, -3, 50)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bone2D5" type="Bone2D" parent="Skeleton/Body/rightLeg/Bone2D4"]
+position = Vector2(4, 46)
+rest = Transform2D(1, 0, 0, 1, -3, 50)
+
+[node name="targets" type="Node2D" parent="Skeleton"]
+
+[node name="leftArm" type="Node2D" parent="Skeleton/targets"]
+position = Vector2(-49, -167)
+
+[node name="leftLeg" type="Node2D" parent="Skeleton/targets"]
+position = Vector2(-48, 77)
+
+[node name="rightArm" type="Node2D" parent="Skeleton/targets"]
+position = Vector2(46, -152)
+
+[node name="rightLeg" type="Node2D" parent="Skeleton/targets"]
+position = Vector2(45, 80)
