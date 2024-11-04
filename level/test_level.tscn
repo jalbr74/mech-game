@@ -52,7 +52,8 @@ texture = SubResource("GradientTexture2D_u5ub6")
 position = Vector2(571, 454)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(576, 175)
+position = Vector2(263, 421)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("CircleShape2D_uhbe0")

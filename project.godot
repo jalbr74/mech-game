@@ -14,3 +14,7 @@ config/name="mech-game"
 run/main_scene="res://level/test_level.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[physics]
+
+2d/default_gravity=0.0
