@@ -8,12 +8,13 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_b7cg1"]
 gradient = SubResource("Gradient_kth7u")
+height = 70
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y76rd"]
 size = Vector2(16, 115)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wm3rd"]
-size = Vector2(16, 57.9308)
+size = Vector2(16, 60.4642)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_syb06"]
 gradient = SubResource("Gradient_kth7u")
@@ -22,7 +23,7 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.5, 0)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ksgk0"]
-radius = 7.67268
+radius = 6.08277
 
 [sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_m68dj"]
 target_nodepath = NodePath("targets/leftArm")
@@ -118,8 +119,8 @@ position = Vector2(0, -53.5)
 shape = SubResource("RectangleShape2D_y76rd")
 
 [node name="armUpper" type="RigidBody2D" parent="Body"]
-position = Vector2(0, -106)
-rotation = -1.39705
+position = Vector2(-2, -108)
+rotation = -1.54326
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/armUpper"]
@@ -132,8 +133,8 @@ position = Vector2(1.52588e-05, -24.9654)
 shape = SubResource("RectangleShape2D_wm3rd")
 
 [node name="armLower" type="RigidBody2D" parent="Body"]
-position = Vector2(-54, -118)
-rotation = 0.0952662
+position = Vector2(-55, -109)
+rotation = -1.54789
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/armLower"]
@@ -142,26 +143,26 @@ scale = Vector2(0.25, 0.86)
 texture = SubResource("GradientTexture2D_b7cg1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/armLower"]
-position = Vector2(1.52588e-05, -24.9654)
+position = Vector2(1.52588e-05, -24.2593)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_wm3rd")
 
 [node name="Hand" type="RigidBody2D" parent="Body"]
-position = Vector2(-50, -168)
-rotation = 0.0952662
+position = Vector2(-104, -110)
+rotation = -1.54789
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Hand"]
-position = Vector2(1.16363, 1.87759)
 scale = Vector2(0.2, 0.2)
 texture = SubResource("GradientTexture2D_syb06")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Hand"]
-position = Vector2(1.37278, 1.24236)
+rotation = 2.87979
 shape = SubResource("CircleShape2D_ksgk0")
 
 [node name="legUpper" type="RigidBody2D" parent="Body"]
-position = Vector2(0, -1)
-rotation = -2.19778
+position = Vector2(-14, 7)
+rotation = -3.30406
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/legUpper"]
@@ -174,7 +175,7 @@ position = Vector2(1.52588e-05, -24.9654)
 shape = SubResource("RectangleShape2D_wm3rd")
 
 [node name="legLower" type="RigidBody2D" parent="Body"]
-position = Vector2(-42, 31)
+position = Vector2(-6, 60)
 rotation = -3.02426
 collision_layer = 2
 
@@ -188,22 +189,20 @@ position = Vector2(1.52588e-05, -24.9654)
 shape = SubResource("RectangleShape2D_wm3rd")
 
 [node name="Foot" type="RigidBody2D" parent="Body"]
-position = Vector2(-49, 78)
+position = Vector2(-12, 109)
 rotation = 0.0952662
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Foot"]
-position = Vector2(1.16363, 1.87759)
 scale = Vector2(0.2, 0.2)
 texture = SubResource("GradientTexture2D_syb06")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Foot"]
-position = Vector2(1.37278, 1.24236)
 shape = SubResource("CircleShape2D_ksgk0")
 
 [node name="armUpper2" type="RigidBody2D" parent="Body"]
-position = Vector2(0, -108)
-rotation = 1.65796
+position = Vector2(2, -108)
+rotation = 1.54865
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/armUpper2"]
@@ -212,12 +211,13 @@ scale = Vector2(0.25, 0.86)
 texture = SubResource("GradientTexture2D_b7cg1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/armUpper2"]
-position = Vector2(1.52588e-05, -24.9654)
+position = Vector2(-0.468185, -24.0163)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_wm3rd")
 
 [node name="armLower2" type="RigidBody2D" parent="Body"]
-position = Vector2(54, -103)
-rotation = -0.228651
+position = Vector2(58, -109)
+rotation = 1.53938
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/armLower2"]
@@ -226,26 +226,24 @@ scale = Vector2(0.25, 0.86)
 texture = SubResource("GradientTexture2D_b7cg1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/armLower2"]
-position = Vector2(1.52588e-05, -24.9654)
+position = Vector2(0.0380632, -24.5153)
 shape = SubResource("RectangleShape2D_wm3rd")
 
 [node name="Hand2" type="RigidBody2D" parent="Body"]
-position = Vector2(41, -153)
-rotation = 0.0952662
+position = Vector2(107, -112)
+rotation = 0.116969
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Hand2"]
-position = Vector2(1.16363, 1.87759)
 scale = Vector2(0.2, 0.2)
 texture = SubResource("GradientTexture2D_syb06")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Hand2"]
-position = Vector2(1.37278, 1.24236)
 shape = SubResource("CircleShape2D_ksgk0")
 
 [node name="legUpper2" type="RigidBody2D" parent="Body"]
-position = Vector2(0, 1)
-rotation = 2.25495
+position = Vector2(14, 6)
+rotation = 2.97948
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/legUpper2"]
@@ -258,8 +256,8 @@ position = Vector2(1.52588e-05, -24.9654)
 shape = SubResource("RectangleShape2D_wm3rd")
 
 [node name="legLower2" type="RigidBody2D" parent="Body"]
-position = Vector2(38, 33)
-rotation = -3.27378
+position = Vector2(23, 59)
+rotation = -3.14845
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/legLower2"]
@@ -272,17 +270,15 @@ position = Vector2(1.52588e-05, -24.9654)
 shape = SubResource("RectangleShape2D_wm3rd")
 
 [node name="Foot2" type="RigidBody2D" parent="Body"]
-position = Vector2(43, 78)
+position = Vector2(23, 109)
 rotation = 0.0952662
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Body/Foot2"]
-position = Vector2(1.16363, 1.87759)
 scale = Vector2(0.2, 0.2)
 texture = SubResource("GradientTexture2D_syb06")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Foot2"]
-position = Vector2(1.37278, 1.24236)
 shape = SubResource("CircleShape2D_ksgk0")
 
 [node name="Pins" type="Node2D" parent="Body"]
@@ -293,12 +289,14 @@ node_a = NodePath("../../armUpper")
 node_b = NodePath("../../Body")
 
 [node name="ArmToArm" type="PinJoint2D" parent="Body/Pins"]
-position = Vector2(-50, -116)
+position = Vector2(-55, -109)
+rotation = -1.64316
 node_a = NodePath("../../armUpper")
 node_b = NodePath("../../armLower")
 
 [node name="HandToArm" type="PinJoint2D" parent="Body/Pins"]
-position = Vector2(-50, -168)
+position = Vector2(-104, -110)
+rotation = -1.64316
 node_a = NodePath("../../armLower")
 node_b = NodePath("../../Hand")
 
@@ -308,12 +306,12 @@ node_a = NodePath("../../armUpper2")
 node_b = NodePath("../../Body")
 
 [node name="ArmToArm2" type="PinJoint2D" parent="Body/Pins"]
-position = Vector2(56, -102)
+position = Vector2(57, -109)
 node_a = NodePath("../../armUpper2")
 node_b = NodePath("../../armLower2")
 
 [node name="HandToArm2" type="PinJoint2D" parent="Body/Pins"]
-position = Vector2(40, -151)
+position = Vector2(107, -112)
 node_a = NodePath("../../armLower2")
 node_b = NodePath("../../Hand2")
 
@@ -323,12 +321,12 @@ node_a = NodePath("../../legUpper")
 node_b = NodePath("../../Body")
 
 [node name="LegToLeg" type="PinJoint2D" parent="Body/Pins"]
-position = Vector2(-41, 31)
+position = Vector2(-6, 60)
 node_a = NodePath("../../legUpper")
 node_b = NodePath("../../legLower")
 
 [node name="FootToLeg" type="PinJoint2D" parent="Body/Pins"]
-position = Vector2(-48, 79)
+position = Vector2(-11, 109)
 node_a = NodePath("../../legLower")
 node_b = NodePath("../../Foot")
 
@@ -338,12 +336,12 @@ node_a = NodePath("../../legUpper2")
 node_b = NodePath("../../Body")
 
 [node name="LegToLeg2" type="PinJoint2D" parent="Body/Pins"]
-position = Vector2(39, 34)
+position = Vector2(23, 60)
 node_a = NodePath("../../legUpper2")
 node_b = NodePath("../../legLower2")
 
 [node name="FootToLeg2" type="PinJoint2D" parent="Body/Pins"]
-position = Vector2(44, 82)
+position = Vector2(23, 110)
 node_a = NodePath("../../legLower2")
 node_b = NodePath("../../Foot2")
 
@@ -373,7 +371,9 @@ rest = Transform2D(1, 0, 0, 1, -35, 29)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone2D4" type="Bone2D" parent="Skeleton/Body/leftLeg"]
-position = Vector2(-21, 31)
+position = Vector2(-37.5945, 42.9429)
+rotation = 1.94696
+scale = Vector2(0.999983, 0.999983)
 rest = Transform2D(1, 0, 0, 1, -3, 50)
 metadata/_local_pose_override_enabled_ = true
 
@@ -401,7 +401,9 @@ rest = Transform2D(1, 0, 0, 1, 35, 29)
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone2D4" type="Bone2D" parent="Skeleton/Body/rightLeg"]
-position = Vector2(21, 31)
+position = Vector2(53.4954, 10.7936)
+rotation = -1.28496
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, -3, 50)
 metadata/_local_pose_override_enabled_ = true
 
@@ -415,10 +417,10 @@ rest = Transform2D(1, 0, 0, 1, -3, 50)
 position = Vector2(-9, -119)
 
 [node name="leftLeg" type="Node2D" parent="Skeleton/targets"]
-position = Vector2(-48, 77)
+position = Vector2(-32, 34)
 
 [node name="rightArm" type="Node2D" parent="Skeleton/targets"]
 position = Vector2(156, -113)
 
 [node name="rightLeg" type="Node2D" parent="Skeleton/targets"]
-position = Vector2(45, 80)
+position = Vector2(24, 111)
